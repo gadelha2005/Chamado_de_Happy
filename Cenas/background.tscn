@@ -1,0 +1,271 @@
+[gd_scene load_steps=24 format=3 uid="uid://bnpgrilieevim"]
+
+[ext_resource type="Script" path="res://Scripts/background.gd" id="1_4llyg"]
+[ext_resource type="Texture2D" uid="uid://bkx4b71ima61p" path="res://Assets/background/additional/water.png" id="1_uvndr"]
+[ext_resource type="Texture2D" uid="uid://cuw8oqxqliijw" path="res://Assets/background/additional/sky.png" id="2_6futf"]
+[ext_resource type="Texture2D" uid="uid://bcf555d2ujdqq" path="res://Assets/background/main_background.png" id="3_gssm6"]
+[ext_resource type="Texture2D" uid="uid://doqadnro8f3n" path="res://Assets/background/clouds/big.png" id="4_01ow3"]
+[ext_resource type="Texture2D" uid="uid://snkykpwj4k4s" path="res://Assets/background/clouds/small_1.png" id="5_ecciy"]
+[ext_resource type="Texture2D" uid="uid://0adhv5vi5ivq" path="res://Assets/background/clouds/small_2.png" id="6_7ee5l"]
+[ext_resource type="Texture2D" uid="uid://iotld8ixdgd3" path="res://Assets/background/clouds/small_3.png" id="7_2hc7a"]
+[ext_resource type="Texture2D" uid="uid://ciyoe5qx4cu3" path="res://Assets/background/water_reflection/small/1.png" id="8_gxcdm"]
+[ext_resource type="Texture2D" uid="uid://cl0dc2bwufb62" path="res://Assets/background/water_reflection/small/2.png" id="9_phfto"]
+[ext_resource type="Texture2D" uid="uid://dteciaivmqop0" path="res://Assets/background/water_reflection/small/3.png" id="10_elp82"]
+[ext_resource type="Texture2D" uid="uid://d2urctvogdk26" path="res://Assets/background/water_reflection/small/4.png" id="11_jw1uu"]
+[ext_resource type="Texture2D" uid="uid://0wxw1hj71be4" path="res://Assets/background/water_reflection/medium/1.png" id="12_54lkf"]
+[ext_resource type="Texture2D" uid="uid://ccas1dk05j5g7" path="res://Assets/background/water_reflection/medium/2.png" id="13_e6m0o"]
+[ext_resource type="Texture2D" uid="uid://bew5gp1r6vb1y" path="res://Assets/background/water_reflection/medium/3.png" id="14_7wxvc"]
+[ext_resource type="Texture2D" uid="uid://bkunvsj2ubkdj" path="res://Assets/background/water_reflection/medium/4.png" id="15_2pon2"]
+[ext_resource type="Texture2D" uid="uid://boythgc47rq7q" path="res://Assets/background/water_reflection/big/1.png" id="16_p8yw6"]
+[ext_resource type="Texture2D" uid="uid://cn5pgunmoys6l" path="res://Assets/background/water_reflection/big/2.png" id="17_fulqc"]
+[ext_resource type="Texture2D" uid="uid://uotyrjd7n1wf" path="res://Assets/background/water_reflection/big/3.png" id="18_fvbmf"]
+[ext_resource type="Texture2D" uid="uid://dhtgje0n5oyo4" path="res://Assets/background/water_reflection/big/4.png" id="19_pdad8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8lj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gxcdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_phfto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_elp82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jw1uu")
+}],
+"loop": true,
+"name": &"Small Ref",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3p2pb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_54lkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e6m0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7wxvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2pon2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vcg6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_p8yw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fulqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fvbmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pdad8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_4llyg")
+
+[node name="AdcWater" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="AdcWater"]
+custom_minimum_size = Vector2(640, 360)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_uvndr")
+
+[node name="AdcSky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="AdcSky"]
+custom_minimum_size = Vector2(640, 360)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_6futf")
+
+[node name="DefautBackground" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="DefautBackground"]
+texture_filter = 1
+custom_minimum_size = Vector2(640, 360)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_gssm6")
+
+[node name="CloudsT1" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(896, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT1"]
+texture_filter = 1
+offset_top = 141.0
+offset_right = 448.0
+offset_bottom = 242.0
+texture = ExtResource("4_01ow3")
+
+[node name="CloudsT2" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(896, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT2"]
+texture_filter = 1
+offset_left = 448.0
+offset_top = 141.0
+offset_right = 896.0
+offset_bottom = 242.0
+texture = ExtResource("4_01ow3")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloudsT3" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT3"]
+texture_filter = 1
+offset_left = 549.0
+offset_top = 29.0
+offset_right = 623.0
+offset_bottom = 53.0
+texture = ExtResource("5_ecciy")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloudsT4" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT4"]
+texture_filter = 1
+offset_left = 102.0
+offset_top = -139.0
+offset_right = 176.0
+offset_bottom = -115.0
+texture = ExtResource("5_ecciy")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloudsT5" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT5"]
+texture_filter = 1
+offset_left = 23.0
+offset_top = 96.0
+offset_right = 156.0
+offset_bottom = 131.0
+texture = ExtResource("6_7ee5l")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloudsT6" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT6"]
+texture_filter = 1
+offset_left = 288.0
+offset_top = 44.0
+offset_right = 428.0
+offset_bottom = 83.0
+texture = ExtResource("7_2hc7a")
+metadata/_edit_use_anchors_ = true
+
+[node name="CloudsT7" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsT7"]
+texture_filter = 1
+offset_left = 444.0
+offset_top = -130.0
+offset_right = 584.0
+offset_bottom = -91.0
+texture = ExtResource("7_2hc7a")
+metadata/_edit_use_anchors_ = true
+
+[node name="WaterReflectionT1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterReflectionT1"]
+texture_filter = 1
+position = Vector2(47, 278)
+sprite_frames = SubResource("SpriteFrames_v8lj6")
+animation = &"Small Ref"
+autoplay = "Small Ref"
+
+[node name="WaterReflectionT2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterReflectionT2"]
+texture_filter = 1
+position = Vector2(483, 308)
+sprite_frames = SubResource("SpriteFrames_v8lj6")
+animation = &"Small Ref"
+autoplay = "Small Ref"
+
+[node name="WaterReflectionT3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterReflectionT3"]
+texture_filter = 1
+position = Vector2(349, 289)
+sprite_frames = SubResource("SpriteFrames_3p2pb")
+
+[node name="WaterReflectionT4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterReflectionT4"]
+texture_filter = 1
+position = Vector2(131, 266)
+scale = Vector2(1, 0.833333)
+sprite_frames = SubResource("SpriteFrames_3p2pb")
+
+[node name="WaterReflectionT5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterReflectionT5"]
+texture_filter = 1
+position = Vector2(134, 313)
+sprite_frames = SubResource("SpriteFrames_vcg6y")
+
+[node name="WaterReflectionT6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WaterReflectionT6"]
+texture_filter = 1
+position = Vector2(485, 254)
+sprite_frames = SubResource("SpriteFrames_vcg6y")

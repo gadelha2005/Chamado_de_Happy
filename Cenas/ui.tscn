@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8f48nt3t5aeq"]
+
+[ext_resource type="Script" path="res://Cenas/ui.gd" id="1_00iwt"]
+
+[node name="UI" type="Node"]
+script = ExtResource("1_00iwt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -101.0
+offset_top = 13.0
+offset_right = -25.0
+offset_bottom = 36.0
+grow_horizontal = 0
+text = "COINS = 0"

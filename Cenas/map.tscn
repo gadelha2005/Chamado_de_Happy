@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu5dd0xx188fp"]
+
+[ext_resource type="Script" path="res://Scripts/map.gd" id="1_a80ot"]
+[ext_resource type="PackedScene" uid="uid://doodyjaj0da8q" path="res://Cenas/player_1_map.tscn" id="1_kyjiw"]
+[ext_resource type="Texture2D" uid="uid://cisbua5nf1ves" path="res://Assets/maptest.webp" id="1_p4in2"]
+[ext_resource type="Texture2D" uid="uid://jpu3kyyn5hvv" path="res://Assets/PopUpLevel.png" id="4_l2te0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kvmj"]
+size = Vector2(38, 46)
+
+[node name="Map" type="Node"]
+script = ExtResource("1_a80ot")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.999985, 37)
+scale = Vector2(0.866111, 0.866111)
+texture = ExtResource("1_p4in2")
+
+[node name="Player1" parent="." instance=ExtResource("1_kyjiw")]
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="Player1"]
+scale = Vector2(0.333333, 0.333333)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(380, -50)
+
+[node name="Colisão Level 1" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_4kvmj")
+
+[node name="Level1 PopUp" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(363, -80)
+scale = Vector2(2, 2)
+texture = ExtResource("4_l2te0")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

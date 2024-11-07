@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1s1xbd6tkteg"]
+
+[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_8g36h"]
+[ext_resource type="Texture2D" uid="uid://xv24xrww6n7" path="res://Assets/Sol1.png" id="2_ccmt8"]
+[ext_resource type="Texture2D" uid="uid://y1k1pxwv3ojp" path="res://Assets/Sol2.png" id="3_ot4ov"]
+[ext_resource type="Texture2D" uid="uid://k3stoaj3x70m" path="res://Assets/Sol3.png" id="4_vcldk"]
+[ext_resource type="Texture2D" uid="uid://4fl6v3ehhj6o" path="res://Assets/Sol4.png" id="5_hl28f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j7j62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ccmt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ot4ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vcldk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hl28f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t43i1"]
+radius = 8.0
+height = 24.0
+
+[node name="Coin" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_8g36h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_j7j62")
+autoplay = "default"
+frame_progress = 0.945859
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_t43i1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
