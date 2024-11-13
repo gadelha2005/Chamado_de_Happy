@@ -10,12 +10,11 @@ const SLIDE_SMOOTHNESS = 0.1  # Controle de suavidade do deslizamento
 
 @onready var AnimatedSprite = $AnimatedSprite2D
  
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	# Adiciona a gravidade
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity += get_gravity() * delta
 
 	var floor_normal = get_floor_normal()
 	var floor_angle = floor_normal.angle()

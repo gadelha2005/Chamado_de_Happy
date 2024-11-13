@@ -1,11 +1,11 @@
 extends Area2D
 
-signal coin_collected  # Sinal para notificar que a moeda foi coletada
+var coins = 0
 
-@onready var coin = $"."
-
+@onready var ui: UI
 
 func _on_body_entered(body):
-	if (body is PlayerLevel):
-		emit_signal("coin_collected")
+	if (body is PlayerLevel): # substitua "Player" pelo nome real do seu personagem
 		queue_free()
+	
+		

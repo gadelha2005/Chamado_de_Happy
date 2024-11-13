@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dswnvcoflll8f"]
+[gd_scene load_steps=6 format=3 uid="uid://dswnvcoflll8f"]
 
 [ext_resource type="Texture2D" uid="uid://b4bsnlnxq7xv0" path="res://Assets/Botão1.png" id="1_0f46j"]
 [ext_resource type="Script" path="res://Cenas/button.gd" id="1_pkb3r"]
-[ext_resource type="Texture2D" uid="uid://djl6n7nan55tx" path="res://Assets/Botão2.png" id="2_txujg"]
 [ext_resource type="Texture2D" uid="uid://t72u8m83rbo7" path="res://Assets/Botão3.png" id="3_qakyr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3e4dy"]
@@ -16,9 +15,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_txujg")
-}, {
 "duration": 1.0,
 "texture": ExtResource("3_qakyr")
 }],
