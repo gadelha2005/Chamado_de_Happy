@@ -1,19 +1,3 @@
-[gd_scene load_steps=4 format=3 uid="uid://brdlery4q4t8u"]
+[gd_scene format=3 uid="uid://brdlery4q4t8u"]
 
-[ext_resource type="Texture2D" uid="uid://n7ptpqxub0mv" path="res://Assets/Sem título.png" id="1_l2r5k"]
-[ext_resource type="Script" path="res://Cenas/rope.gd" id="1_mwov8"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbxx5"]
-size = Vector2(4, 82)
-
-[node name="Rope" type="Area2D"]
-script = ExtResource("1_mwov8")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_l2r5k")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_xbxx5")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[node name="level_2" type="Node"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfsg6kssa0egr"]
 
 [ext_resource type="Script" path="res://Cenas/door.gd" id="1_2q6lc"]
-[ext_resource type="Texture2D" uid="uid://bihs4pjidma7d" path="res://Assets/PortaF2.png" id="1_cpukd"]
+[ext_resource type="Texture2D" uid="uid://q7s1q7souhhd" path="res://Assets/PortaF2.png" id="1_cpukd"]
 [ext_resource type="Texture2D" uid="uid://bk7eehguxx0hk" path="res://Assets/PortaF1.png" id="1_icse7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4abdk"]

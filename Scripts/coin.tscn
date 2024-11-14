@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://b1s1xbd6tkteg"]
 
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_8g36h"]
-[ext_resource type="Texture2D" uid="uid://xv24xrww6n7" path="res://Assets/Sol1.png" id="2_ccmt8"]
-[ext_resource type="Texture2D" uid="uid://y1k1pxwv3ojp" path="res://Assets/Sol2.png" id="3_ot4ov"]
-[ext_resource type="Texture2D" uid="uid://k3stoaj3x70m" path="res://Assets/Sol3.png" id="4_vcldk"]
-[ext_resource type="Texture2D" uid="uid://4fl6v3ehhj6o" path="res://Assets/Sol4.png" id="5_hl28f"]
+[ext_resource type="Texture2D" uid="uid://cm3s50hbanalx" path="res://Assets/Sol1.png" id="2_ccmt8"]
+[ext_resource type="Texture2D" uid="uid://fl4qpw785qqk" path="res://Assets/Sol2.png" id="3_ot4ov"]
+[ext_resource type="Texture2D" uid="uid://xwc2nw5jffs4" path="res://Assets/Sol3.png" id="4_vcldk"]
+[ext_resource type="Texture2D" uid="uid://5xvbl48fppq7" path="res://Assets/Sol4.png" id="5_hl28f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j7j62"]
 animations = [{

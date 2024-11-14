@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c73skmoakxl6s"]
+
+[ext_resource type="Texture2D" uid="uid://buj6pubairxp8" path="res://Assets/Brick.png" id="1_wuq3m"]
+[ext_resource type="PackedScene" uid="uid://chwdvm8ujw2d5" path="res://Cenas/player_1_level.tscn" id="2_7x13u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3g8kj"]
+texture = ExtResource("1_wuq3m")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_56qqo"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_3g8kj")
+
+[node name="level_2" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_56qqo")
+format = 2
+layer_0/tile_data = PackedInt32Array(-589844, 0, 0, -524308, 0, 0, -458772, 0, 0, -393236, 0, 0, -327700, 0, 0, -262164, 0, 0, -196628, 0, 0, -196627, 0, 0, -196626, 0, 0, -196625, 0, 0, -196624, 0, 0, -196623, 0, 0, -196622, 0, 0, -196621, 0, 0, -196620, 0, 0, -196619, 0, 0, -196618, 0, 0, -196617, 0, 0, -196616, 0, 0, -196615, 0, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -262134, 0, 0, -262130, 0, 0, -262129, 0, 0, -262128, 0, 0, -262127, 0, 0, -262126, 0, 0, -262125, 0, 0, 327660, 0, 0, 327661, 0, 0, 327662, 0, 0, 327663, 0, 0, 327664, 0, 0, 327665, 0, 0, 327666, 0, 0, 327667, 0, 0, 327668, 0, 0, 327669, 0, 0, 327670, 0, 0, 327671, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0)
+
+[node name="Player 1 - Level" parent="." instance=ExtResource("2_7x13u")]
+position = Vector2(-253, -98)
